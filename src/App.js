@@ -10,10 +10,17 @@ import MyFooter from "./components/MyFooter";
 // III) WELCOME - importo il file di Welcome
 import Welcome from "./components/Welcome";
 
-// CARD LIBRI
+// ALLTHEBOKS LIBRI
 import AllTheBooks from "./components/AllTheBooks";
 
-// ALLTHEBOOKS - importo il file allthebooks
+// SINGLEBOOK
+import SingleBook from "./components/SingleBook";
+
+import fantasy from "./books/fantasy.json";
+import horror from "./books/horror.json";
+
+// BOOKLIST
+import BookList from "./components/BookList";
 
 function App() {
   return (
@@ -24,7 +31,16 @@ function App() {
       <Welcome />
 
       {/* CARD-LIBRI/ ALLTHEBOOKS */}
-      <AllTheBooks />
+      {/* <AllTheBooks /> */}
+      {/* <AllTheBooks /> */}
+
+      {/* SINGLE BOOK */}
+      {/* di far apparire la foto copertina del primo libro di horror */}
+
+      {/* <SingleBook book={fantasy[0]} /> */}
+
+      <BookList books={horror} />
+
       {/* E)MY FOOTER - invoco la funzione */}
       <MyFooter />
     </div>

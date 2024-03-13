@@ -13,14 +13,14 @@ let AllTheBooks = function () {
     <Container fluid>
       {/* .map lo mettiamo dentro la row*/}
       {/* 1).map fa una copia degli array e un ciclo for -   */}
-      {/* 2) inserisci items(si poteva chiamare anche scifi).map(libri - si poteva chiamare in qualsiasi modo)*/}
+      {/* 2) inserisci ITEMS(si poteva chiamare anche scifi) - .MAP(libri - si poteva chiamare in qualsiasi modo) - INDEX (indice per la key*/}
       {/* 3) il map mappa tutto e abbiamo popolato le card  */}
       <Row>
         {
-          // allininterno metto tutto quello che devo moltiplicare
-          items.map((libri) => {
+          // all'interno di .map metto tutto quello che devo moltiplicare
+          items.map((libri, index) => {
             return (
-              <Col>
+              <Col key={index}>
                 <Card style={{ width: "14rem" }}>
                   <Card.Img variant="top" src={libri.img} />
                   <Card.Body>
